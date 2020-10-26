@@ -394,3 +394,7 @@ io.on("connection", function (socket) {
 // start.js must be modified still
 // when I log in as dill0@example.com my profile is empty
 // to log out, create an anchor tag <a> with href path to /logout, then set a server route to make the session id equal null
+
+// links:
+// https://www.smashingmagazine.com/2014/02/create-client-side-shopping-cart/
+// https://www.w3schools.com/css/css_navbar.asp
