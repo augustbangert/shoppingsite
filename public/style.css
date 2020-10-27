@@ -51,12 +51,7 @@ h1 {
 
 /******* hyperlink decoration *******/
 
-a,
-a:link,
-a:visited,
-a:focus,
-a:hover,
-a:active {
+a {
     color: white;
     text-decoration: none;
     /* cursor: crosshair; */
@@ -121,10 +116,10 @@ main > * {
 #navbar-div {
     width: 100%;
     height: auto;
-    position: relative;
+    position: absolute;
     top: 42%;
     left: 50%;
-    transform: translate(-50%, -250%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
