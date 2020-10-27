@@ -51,20 +51,30 @@ h1 {
 
 /******* hyperlink decoration *******/
 
+a,
 a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+    color: white;
+    text-decoration: none;
+    /* cursor: crosshair; */
+}
+
+/* a:link,
 a:visited {
-    text-decoration: underline;
-    color: red;
+    color: white;
 }
 
 a:hover,
 a:active {
-    color: red;
-    text-decoration: underline;
-    background-color: #ccd4cd;
-    /* display: inline-block; */
-    border-radius: 40%;
-}
+    color: white;
+} */
+
+/* background-color: #ccd4cd; */
+/* display: inline-block; */
+/* border-radius: 40%; */
 
 /******* positioning *******/
 
@@ -97,13 +107,46 @@ main > * {
     margin: 0;
 }
 
-a {
+/* a {
     margin-left: 50px;
-}
+} */
 
 /******* navbar *******/
 
-.navbar {
+#cover-photo {
+    width: 100%;
+    height: auto;
+}
+
+#navbar-div {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -250%);
+    text-align: center;
+}
+
+#header-div {
+    /* width: 100%;
+    height: auto;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; */
+}
+
+#band-header {
+    font-size: 80px;
+}
+
+.navbar-link {
+    padding: 20px;
+}
+
+/* .navbar {
   overflow: hidden;
   background-color: #333;
   position: fixed;
@@ -124,4 +167,4 @@ a {
 .navbar a:hover {
   background: #ddd;
   color: black;
-}
+} */
