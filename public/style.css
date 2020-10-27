@@ -5,6 +5,7 @@
 * {
     /* background-color: #eef2fb; */
     /* margin-right: 30px; */
+    margin: 0;
 }
 
 #top-div {
@@ -98,4 +99,29 @@ main > * {
 
 a {
     margin-left: 50px;
+}
+
+/******* navbar *******/
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
 }
