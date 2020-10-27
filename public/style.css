@@ -1,8 +1,12 @@
 * {
     margin: 0;
-    background-color: cornsilk;
+    /* background-color: cornsilk; */
     /* overflow-x: hidden;
     overflow-y: scroll; */
+}
+
+body {
+    background-color: cornsilk;
 }
 
 p,
@@ -147,3 +151,26 @@ img {
 } */
 
 /* https://css-tricks.com/snippets/css/transparent-background-images/ */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
