@@ -73,6 +73,10 @@ a:active {
 
 /******* positioning *******/
 
+main {
+    background-color: black;
+}
+
 main > * {
     margin: auto;
 }
@@ -111,6 +115,7 @@ main > * {
 #cover-photo {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 #navbar-div {
@@ -124,6 +129,7 @@ main > * {
 }
 
 #header-div {
+    padding: 0;
     /* width: 100%;
     height: auto;
     position: absolute;
