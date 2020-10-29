@@ -8,7 +8,9 @@
     margin: 0;
 }
 
-#top-div {
+/**************/
+
+/* #top-div {
     background-color: #eef2fb;
     border: 2px solid #222627;
     padding: 10px;
@@ -20,7 +22,7 @@ header {
 
 #home-div {
     background-color: #eef2fb;
-}
+} */
 
 /******* fonts: style, color and size *******/
 
@@ -31,60 +33,30 @@ p,
 .link,
 button,
 input {
-    /* flex-direction: column; */
-    /* margin: auto; */
-    /* position: relative; */
     color: #222627;
-    /* font: 12px; */
-    /* width: 280px; */
     font-family: "Architects Daughter", cursive;
-    /* cancels the h2 bolding */
     font-weight: normal;
     font-size: large;
 }
-
-h1 {
-    font-size: x-large;
-    font-weight: normal;
-    margin-top: 10px;
-}
-
-/******* hyperlink decoration *******/
-
-a {
-    color: white;
-    text-decoration: none;
-    /* cursor: crosshair; */
-}
-
-/* a:link,
-a:visited {
-    color: white;
-}
-
-a:hover,
-a:active {
-    color: white;
-} */
-
-/* background-color: #ccd4cd; */
-/* display: inline-block; */
-/* border-radius: 40%; */
-
-/******* positioning *******/
 
 main {
     background-color: black;
 }
 
-main > * {
+/* h1 {
+    font-size: x-large;
+    font-weight: normal;
+    margin-top: 10px;
+} */
+
+/******* positioning *******/
+
+/* main > * {
     margin: auto;
 }
 
 #top-div {
     width: 350px;
-    /* controls the width of the div */
-    /* text-align: center; */
 }
 
 #home-div {
@@ -94,23 +66,19 @@ main > * {
 
 #home-div > * {
     width: fit-content;
-}
+} */
 
 /******* spacing *******/
 
-.event-title {
+/* .event-title {
     margin-left: 100px;
 }
 
 .contact-details {
     margin: 0;
-}
-
-/* a {
-    margin-left: 50px;
 } */
 
-/******* navbar *******/
+/******* navbar / photo *******/
 
 #cover-photo {
     width: 100%;
@@ -147,25 +115,24 @@ main > * {
     padding: 20px;
 }
 
-/* .navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
+/******* hyperlink decoration *******/
+
+a {
+    color: white;
+    text-decoration: none;
+    /* cursor: crosshair; */
 }
 
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+/* a:link,
+a:visited {
+    color: white;
 }
 
-.navbar a:hover {
-  background: #ddd;
-  color: black;
+a:hover,
+a:active {
+    color: white;
 } */
+
+/* background-color: #ccd4cd; */
+/* display: inline-block; */
+/* border-radius: 40%; */
