@@ -17,26 +17,46 @@ export default function App() {
     return (
         <div id="app-div">
             <header>
-                <h1>b&#228;rosaurus official site 🦕</h1>
                 <BrowserRouter>
-                    <Link to="/shows" className="link">
-                        Shows
-                    </Link>
-                    <Link to="/music" className="link">
-                        Music
-                    </Link>
-                    <Link to="/photos" className="link">
-                        Photos
-                    </Link>
-                    <Link to="/email" className="link">
-                        Email
-                    </Link>
-                    <Link to="/store" className="link">
-                        Store
-                    </Link>
-                    <Link to="/contact" className="link">
-                        Contact
-                    </Link>
+                    <head>
+                        <title>b&#228;rosaurus</title>
+                        <link
+                            rel="icon"
+                            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/sauropod_1f995.png"
+                        />
+                    </head>
+                    <div id="header-div">
+                        <img
+                            id="cover-photo"
+                            src="./david-and-toni.JPG"
+                            alt="David and Toni"
+                        />
+                        <div id="navbar-div">
+                            <div>
+                                <a id="band-header" href="#about">
+                                    b&#228;rosaurus
+                                </a>
+                            </div>
+                            <Link to="/shows" className="navbar-link">
+                                Shows
+                            </Link>
+                            <Link to="/music" className="navbar-link">
+                                Music
+                            </Link>
+                            <Link to="/photos" className="navbar-link">
+                                Photos
+                            </Link>
+                            <Link to="/email" className="navbar-link">
+                                Email
+                            </Link>
+                            <Link to="/store" className="navbar-link">
+                                Store
+                            </Link>
+                            <Link to="/contact" className="navbar-link">
+                                Contact
+                            </Link>
+                        </div>
+                    </div>
                     <Route exact path="/shows" render={() => <Shows />} />
                     <Route exact path="/music" render={() => <Music />} />
                     <Route exact path="/photos" render={() => <Photos />} />
@@ -51,6 +71,7 @@ export default function App() {
                     path="/"
                     render={() => (
                         <div id="about-div">
+                            <h1>b&#228;rosaurus official site 🦕</h1>
                             <div>
                                 <h2>About b&#228;rosaurus</h2>
                                 <p>Wir sind bärosaurus aus Berlin ✌🏼🦕</p>
