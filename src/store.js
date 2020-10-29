@@ -8,7 +8,7 @@ function initializeReactGA() {
     ReactGA.pageview("/homepage");
 }
 
-export default function Home() {
+export default function Store() {
     return (
         <div id="top-div">
             <header>

@@ -5,7 +5,7 @@ let credentials; // = require("./smtp.json");
 //     ? (credentials = process.env)
 //     : (credentials = require("./smtp.json"));
 
-export default function Email() {
+export default function Store() {
     const [input, setInput] = useState({});
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
