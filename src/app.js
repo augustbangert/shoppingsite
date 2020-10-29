@@ -19,6 +19,24 @@ export default function App() {
             <header>
                 <h1>b&#228;rosaurus official site 🦕</h1>
                 <BrowserRouter>
+                    <Link to="/shows" className="link">
+                        Shows
+                    </Link>
+                    <Link to="/music" className="link">
+                        Music
+                    </Link>
+                    <Link to="/photos" className="link">
+                        Photos
+                    </Link>
+                    <Link to="/email" className="link">
+                        Email
+                    </Link>
+                    <Link to="/store" className="link">
+                        Store
+                    </Link>
+                    <Link to="/contact" className="link">
+                        Contact
+                    </Link>
                     <Route exact path="/shows" render={() => <Shows />} />
                     <Route exact path="/music" render={() => <Music />} />
                     <Route exact path="/photos" render={() => <Photos />} />
@@ -37,17 +55,14 @@ export default function App() {
                                 <h2>About b&#228;rosaurus</h2>
                                 <p>Wir sind bärosaurus aus Berlin ✌🏼🦕</p>
                             </div>
-                            <p className="contact-details">
-                                booking: baerosaurus@gmail.com
-                            </p>
-                            <p className="contact-details">
-                                copyright (c) b&#228;rosaurus 2020
-                            </p>
                         </div>
                     )}
                 />
-                <Route exact path="/email" render={() => <Email />} />
             </BrowserRouter>
+            <p className="contact-details">booking: baerosaurus@gmail.com</p>
+            <p className="contact-details">
+                copyright (c) b&#228;rosaurus 2020
+            </p>
         </div>
     );
 }
