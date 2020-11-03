@@ -2,7 +2,7 @@ import React from "react";
 import axios from "./axios";
 import { Link } from "react-router-dom";
 
-export class Store extends React.Component {
+export default class Store extends React.Component {
     // removed default
     constructor(props) {
         super(props);
@@ -42,18 +42,6 @@ export class Store extends React.Component {
                         placeholder="email"
                         onChange={this.handleChange}
                     ></input>
-                    {/* <select name="select" onChange={this.num}>
-                        {num.map(function (n) {
-                            return (
-                                <option
-                                    value={n}
-                                    selected={this.state.selected === n}
-                                >
-                                    {n}
-                                </option>
-                            );
-                        })}
-                    </select> */}
                     <input
                         type="password"
                         name="password"
