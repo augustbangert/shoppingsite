@@ -38,27 +38,34 @@ export default class Store extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type="text"
-                        name="email"
-                        placeholder="email"
+                        name="item"
+                        placeholder="item"
                         onChange={this.handleChange}
                     ></input>
                     <input
                         type="password"
-                        name="password"
-                        placeholder="password"
+                        name="quantity"
+                        placeholder="quantity"
                         onChange={this.handleChange}
                     ></input>
-                    <button>log in</button>
+                    <input
+                        type="password"
+                        name="price"
+                        placeholder="price"
+                        onChange={this.handleChange}
+                    ></input>
+                    <input
+                        type="password"
+                        name="price"
+                        placeholder="price"
+                        onChange={this.handleChange}
+                    ></input>
+                    <button>add to cart</button>
                 </form>
                 <br />
                 {this.state.error && (
-                    <p className="error">
-                        An error occured. Please re-enter your details.
-                    </p>
+                    <p className="error">An error occured. Please retry.</p>
                 )}
-                <Link to="/resetpassword" className="link">
-                    forgot password?
-                </Link>
             </div>
         );
     }
