@@ -99,12 +99,18 @@ app.post("/email/submit", (req, res) => {
         });
 });
 
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.get("*", function (req, res) {
+app.get("*", (req, res) => {
     res.sendFile(__dirname + "/index.html");
+});
+
+app.post("/store", (req, res) => {
+    // console.log("req: ", req);
+    // console.log("res: ", res);
+    console.log("req.item: ", req.item);
 });
 
 server.listen(process.env.PORT || 8080, function () {
