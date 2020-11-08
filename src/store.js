@@ -13,8 +13,9 @@ export default function Store() {
         e.preventDefault();
         // console.log("this.state", this.state);
         // post request will be made by axios with following arguements
+        var purchaseInfo = [item, quantity, price, size];
         axios
-            .post("/store", item, quantity, price, size)
+            .post("/store", purchaseInfo)
             .then((result) => {
                 console.log("success from axios.post() via /store", result);
             })
@@ -27,14 +28,30 @@ export default function Store() {
         <div id="login-div" className="component">
             <p>log in below:</p>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="item" placeholder="item"></input>
                 <input
                     type="text"
+                    onChange={(e) => setItem(e.target.value)}
+                    name="item"
+                    placeholder="item"
+                ></input>
+                <input
+                    type="text"
+                    onChange={(e) => setQuantity(e.target.value)}
                     name="quantity"
                     placeholder="quantity"
                 ></input>
-                <input type="text" name="price" placeholder="price"></input>
-                <input type="text" name="size" placeholder="size"></input>
+                <input
+                    type="text"
+                    onChange={(e) => setPrice(e.target.value)}
+                    name="price"
+                    placeholder="price"
+                ></input>
+                <input
+                    type="text"
+                    onChange={(e) => setSize(e.target.value)}
+                    name="size"
+                    placeholder="size"
+                ></input>
                 <button>add to cart</button>
             </form>
             <br />

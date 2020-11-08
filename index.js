@@ -108,7 +108,7 @@ app.get("*", (req, res) => {
 });
 
 app.post("/store", (req, res) => {
-    // console.log("req: ", req);
+    console.log("req.body: ", req.body);
     // console.log("res: ", res);
     console.log("req.item: ", req.item);
 });
