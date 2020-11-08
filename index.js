@@ -109,8 +109,16 @@ app.get("*", (req, res) => {
 
 app.post("/store", (req, res) => {
     console.log("req.body: ", req.body);
-    // console.log("res: ", res);
-    console.log("req.item: ", req.item);
+    // sessionStorage.removeItem("item");
+    // sessionStorage.removeItem("quantity");
+    // sessionStorage.removeItem("price");
+    // sessionStorage.removeItem("size");
+    // sessionStorage.setItem("item", req.body[0]);
+    // sessionStorage.setItem("quantity", req.body[1]);
+    // sessionStorage.setItem("price", req.body[2]);
+    // sessionStorage.setItem("size", req.body[3]);
+    // var setItem = sessionStorage.getItem("item");
+    // console.log("setItem: ", setItem);
 });
 
 server.listen(process.env.PORT || 8080, function () {
