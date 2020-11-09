@@ -5,20 +5,28 @@ import { Link } from "react-router-dom";
 export default function Store() {
     const [item, setItem] = useState("");
     const [quantity, setQuantity] = useState("");
-    const [price, setPrice] = useState("");
     const [size, setSize] = useState("");
+    const [total, setTotal] = useState("");
 
     const handleSubmit = (e) => {
         // console.log("handleSubmit ran");
         e.preventDefault();
+
+        var cart = {
+            item: item,
+            price: quantity * 10,
+            quantity: quantity,
+            size: size,
+        };
+        var jsonStr = JSON.stringify(cart);
+
         sessionStorage.removeItem("item");
         sessionStorage.removeItem("quantity");
-        sessionStorage.removeItem("price");
         sessionStorage.removeItem("size");
         sessionStorage.setItem("item", item);
         sessionStorage.setItem("quantity", quantity);
-        sessionStorage.setItem("price", price);
         sessionStorage.setItem("size", size);
+
         // var currentItem = sessionStorage.getItem("item");
         // console.log("currentItem: ", currentItem); // works!!
 
@@ -47,12 +55,6 @@ export default function Store() {
                     onChange={(e) => setQuantity(e.target.value)}
                     name="quantity"
                     placeholder="quantity"
-                ></input>
-                <input
-                    type="text"
-                    onChange={(e) => setPrice(e.target.value)}
-                    name="price"
-                    placeholder="price"
                 ></input>
                 <input
                     type="text"
