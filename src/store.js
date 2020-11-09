@@ -11,17 +11,25 @@ export default function Store() {
     const handleSubmit = (e) => {
         // console.log("handleSubmit ran");
         e.preventDefault();
-        // console.log("this.state", this.state);
-        // post request will be made by axios with following arguements
-        var purchaseInfo = [item, quantity, price, size];
-        axios
-            .post("/store", purchaseInfo)
-            .then((result) => {
-                console.log("success from axios.post() via /store", result);
-            })
-            .catch((err) => {
-                console.log("error from axios.post() via /store", err);
-            });
+        sessionStorage.removeItem("item");
+        sessionStorage.removeItem("quantity");
+        sessionStorage.removeItem("price");
+        sessionStorage.removeItem("size");
+        sessionStorage.setItem("item", item);
+        sessionStorage.setItem("quantity", quantity);
+        sessionStorage.setItem("price", price);
+        sessionStorage.setItem("size", size);
+        // var currentItem = sessionStorage.getItem("item");
+        // console.log("currentItem: ", currentItem); // works!!
+
+        // axios
+        //     .post("/store", purchaseInfo)
+        //     .then((result) => {
+        //         console.log("success from axios.post() via /store", result);
+        //     })
+        //     .catch((err) => {
+        //         console.log("error from axios.post() via /store", err);
+        //     });
     };
 
     return (
