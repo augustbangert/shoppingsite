@@ -19,13 +19,14 @@ export default function Store() {
             size: size,
         };
         var jsonStr = JSON.stringify(cart);
-
-        sessionStorage.removeItem("item");
-        sessionStorage.removeItem("quantity");
-        sessionStorage.removeItem("size");
-        sessionStorage.setItem("item", item);
-        sessionStorage.setItem("quantity", quantity);
-        sessionStorage.setItem("size", size);
+        sessionStorage.setItem("cart", jsonStr);
+        console.log("jsonStr", jsonStr);
+        // sessionStorage.removeItem("item");
+        // sessionStorage.removeItem("quantity");
+        // sessionStorage.removeItem("size");
+        // sessionStorage.setItem("item", item);
+        // sessionStorage.setItem("quantity", quantity);
+        // sessionStorage.setItem("size", size);
 
         // var currentItem = sessionStorage.getItem("item");
         // console.log("currentItem: ", currentItem); // works!!
@@ -42,7 +43,10 @@ export default function Store() {
 
     return (
         <div id="login-div" className="component">
-            <p>log in below:</p>
+            <p>Store Data Here</p>
+            <div>
+                <p></p>
+            </div>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
