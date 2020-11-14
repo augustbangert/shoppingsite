@@ -137,3 +137,13 @@ a:active {
 /* background-color: #ccd4cd; */
 /* display: inline-block; */
 /* border-radius: 40%; */
+
+/*********** store page *************/
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.products img {
+    width: 100%;
+}
