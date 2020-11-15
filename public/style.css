@@ -151,3 +151,14 @@ a:active {
 .product {
     padding: 40px;
 }
+
+button {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#cart-header {
+    background-color: grey;
+    height: 70px;
+    padding-top: 20px;
+}

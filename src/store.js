@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "./axios";
 import { Link } from "react-router-dom";
 
+const PAGE_PRODUCTS = "products";
+const PAGE_CART = "cart";
+
 export default function Store() {
     const [cart, setCart] = useState([]);
+    const [page, setPage] = useState("products");
+
     const [products] = useState([
         {
             name: "T-Shirt",
@@ -20,12 +25,19 @@ export default function Store() {
     ]);
 
     const addToCart = (product) => {
-        console.log("we are in addToCart");
-        setCart([...cart, product]);
+        setCart([...cart, { ...product }]);
     };
 
-    return (
-        <div id="store-div" className="component">
+    const removeFromCart = (productToRemove) => {
+        setCart(cart.filter((product) => product !== productToRemove));
+    };
+
+    const navigateTo = (nextPage) => {
+        setPage(nextPage);
+    };
+
+    const renderProducts = () => (
+        <>
             <h1>Merch</h1>
             <div className="products">
                 {products.map((product, index) => (
@@ -39,6 +51,39 @@ export default function Store() {
                     </div>
                 ))}
             </div>
+        </>
+    );
+
+    const renderCart = () => (
+        <>
+            <h1>Cart</h1>
+            <div className="products">
+                {cart.map((product, index) => (
+                    <div className="product" key={index}>
+                        <h3>{product.name}</h3>
+                        <h4>{product.cost}</h4>
+                        <img src={product.image} alt={product.name} />
+                        <button onClick={() => removeFromCart(product)}>
+                            Remove
+                        </button>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
+
+    return (
+        <div id="store-div" className="component">
+            <div id="cart-header">
+                <button onClick={() => navigateTo(PAGE_CART)}>
+                    Go to Cart ({cart.length})
+                </button>
+                <button onClick={() => navigateTo(PAGE_PRODUCTS)}>
+                    View Merch
+                </button>
+            </div>
+            {page === PAGE_PRODUCTS && renderProducts()}
+            {page === PAGE_CART && renderCart()}
         </div>
     );
 }
