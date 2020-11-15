@@ -3,6 +3,7 @@ import axios from "./axios";
 import { Link } from "react-router-dom";
 
 export default function Store() {
+    const [cart, setCart] = useState([]);
     const [products] = useState([
         {
             name: "T-Shirt",
@@ -18,16 +19,23 @@ export default function Store() {
         },
     ]);
 
+    const addToCart = (product) => {
+        console.log("we are in addToCart");
+        setCart([...cart, product]);
+    };
+
     return (
         <div id="store-div" className="component">
             <h1>Merch</h1>
             <div className="products">
-                {products.map((product) => (
-                    <div>
+                {products.map((product, index) => (
+                    <div className="product" key={index}>
                         <h3>{product.name}</h3>
                         <h4>{product.cost}</h4>
                         <img src={product.image} alt={product.name} />
-                        <button>Add to Cart</button>
+                        <button onClick={() => addToCart(product)}>
+                            Add to Cart
+                        </button>
                     </div>
                 ))}
             </div>
